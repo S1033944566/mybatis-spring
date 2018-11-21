@@ -55,7 +55,9 @@ public class PageMapperTest extends BasicTest {
         List<Country> countries = countryMapper.selectByExample(example);
         PageInfo<Country> pageInfo = new PageInfo<Country>(countries);
         System.out.println(pageInfo.getTotal());
-
+        for (int i = 0; i < countries.size(); i++) {
+            System.out.println(countries.get(i).getCountryname());
+        }
         countries = countryMapper.selectByExample(example);
         pageInfo = new PageInfo<Country>(countries);
         System.out.println(pageInfo.getTotal());
